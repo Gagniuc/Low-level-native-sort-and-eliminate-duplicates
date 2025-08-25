@@ -1,7 +1,14 @@
 # Low level native sort and eliminate duplicates
 
 Ex. (189) - Low level native sort and eliminate duplicates (I), is presented here in three programming languages: Python, MATLAB, and JavaScript. Although the implementations differ in syntax, the underlying concept remains identical across all three versions. Each code sample is reproduced from its respective volume of the series <i>Coding Examples from Simple to Complex</i> (Springer, 2024).
+
 ***
+
+The example initializes two arrays, <i>a</i> and <i>b</i>, with <i>a</i> initially being an empty array and <i>b</i> containing some numerical values. It then defines two variables, <i>r</i> and <i>n</i>, where <i>r</i> is set to 0, and <i>n</i> is assigned the length of array <i>b</i>. The code proceeds to enter a loop that iterates through the elements of array <i>b</i> using a <i>for</i>-loop, where <i>i</i> serves as the loop counter. Inside the loop, it assigns the value of <i>b[i]</i> to <i>a[b[i]]</i>. This effectively creates a new array <i>a</i> where the indices correspond to the values of <i>b</i>, and the values in <i>a</i> are the same as the corresponding values in <i>b</i>. After that, the code calculates the length of the array <i>a</i> by getting the maximum value among the elements (as the maximum value is equal to the number of elements), and stores it in the variable <i>m</i>.
+
+A second <i>for</i>-loop begins, with <i>j</i> as the loop counter, iterating through the indices of array <i>a</i>. Inside this loop, it checks if there is a non-falsy value at index <i>j</i> in array <i>a</i>. If a non-falsy value is found, it assigns that value to <i>b[r]</i> and increments the value of <i>r</i>. Next, the code prints the contents of array <i>b</i>.
+
+Note that this native sorting method works well for number sequences of short ranges and is written for this book. To my knowledge it is not published anywhere but here. Note that the time spent by this method to sort the values of an array is <i>n + m</i>, where <i>m</i> represents the maximum value over elements of the array.
 
 ## Example in Python:
 
